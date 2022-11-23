@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "../../model/empleado.php";
 $obj_empleado = new Empleado();
 $rs = $obj_empleado->read();
@@ -31,13 +32,13 @@ $count =0;
                 title="Inactivar" class="btn btn-xs btn-danger desactivar-item" id="btn_item' . $fila["id_empleado"] . '">
                 <i class="far fa-trash-alt" id="icon_item' . $fila["id_empleado"] . '"></i></button>';
             }
-            if ($_SESSION['actualizar'] == 1) {
+            if ($_SESSION['rango'] == "admin") {
                 $btn_editar = '<button data-id="' . $fila["id_empleado"] . '"
                  title="Mas detalle" class="btn btn-xs btn-warning new-modal-requerimiento"><i class="far fa-edit"></i></button>';
             } else {
                 $btn_editar = "";
             }
-            if ($_SESSION['eliminar'] != 1) {
+            if ($_SESSION['rango'] != "admin") {
                 $accion = "";
             } ?>
             <tr>

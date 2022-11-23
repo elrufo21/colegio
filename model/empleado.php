@@ -33,6 +33,14 @@ class Empleado extends cn{
         mysqli_close($this->f_cn());
         return $rs;
     }
+    public function update(){
+        $query = "UPDATE empleado SET nomres='$this->nombres',apellido_paterno='$this->apellido_paterno',apellido_materno='$this->apellido_materno',
+        nro_documento='$this->nro_documento',direccion='$this->direccion',genero='$this->genero',id_tipo_empleado='$this->id_tipo_empleado',
+        nro_celular='$this->nro_celular',email='$this->email',nro_cuenta='$this->nro_cuenta'";
+        $rs = mysqli_query($this->f_cn(),$query);
+        mysqli_close($this->f_cn());
+        return $rs;
+    }
     public function consult()
     {
         $query = "SELECT * FROM empleado WHERE id_empleado ='$this->id_empleado'";
@@ -56,6 +64,14 @@ class Empleado extends cn{
         }
         mysqli_close($this->f_cn());
     }
+    public function estado($estado){
+        $query= "UPDATE empleado SET estado='$estado'";
+        $rs=mysqli_query($this->f_cn(),$query);
+        mysqli_close($this->f_cn());
+        return $rs;
+    }
+    
+    
 }
 
 ?>
