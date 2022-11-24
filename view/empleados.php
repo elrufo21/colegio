@@ -16,6 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="view/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="view/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="view/css/toastr.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -279,15 +280,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
 
         <!-- INICIA MODAL Tipo marca observacion-->
-        <div class="modal fade" id="modal-form-empleado">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
+       header">
                 <h4 class="modal-title">Tipo marca observacion</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
-              </div>
+              </div> <div class="modal fade" id="modal-form-empleado">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-
               <div class="modal-body">
                 <form class="form_tipo_marca_observacion" id="form_empleado">
 
@@ -364,7 +365,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="view/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="view/dist/js/adminlte.min.js"></script>
-
+  <script src="view/js/toastr.min.js"></script>
 
   <script src="view/js/js-empleados.js"></script>
   <script>

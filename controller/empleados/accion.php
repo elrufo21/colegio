@@ -2,7 +2,6 @@
 include_once "../../model/empleado.php";
 $obj_empleado = new Empleado();
 
-$obj_empleado->id_empleado=$_REQUEST['id'];
 $obj_empleado->nombres=$_REQUEST['txt_nombres'] ;
 $obj_empleado->apellido_paterno=$_REQUEST['txt_ap_pat'] ;
 $obj_empleado->apellido_materno=$_REQUEST['txt_ap_mat'] ;
@@ -15,7 +14,8 @@ $obj_empleado->email=$_REQUEST['txt_email'] ;
 $obj_empleado->nro_cuenta=$_REQUEST['txr_nro_cuenta'] ;
 $obj_empleado->password = generatePassword(strlen($_REQUEST['txt_nombres']));
 
-if($_REQUEST["id"]>0){    
+if($_REQUEST["id"]>0){
+    $obj_empleado->id_empleado=$_REQUEST['id'];    
     $obj_empleado->update();
     echo "true";
     die(); 

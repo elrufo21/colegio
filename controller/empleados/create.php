@@ -45,7 +45,7 @@ $obj_empleado->consult();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txt_doc" name="txt_doc" value="<?php echo $obj_empleado->nro_documento; ?>"/>
+            <input type="number" class="form-control valid validText" id="txt_doc" name="txt_doc" max="99999999" value="<?php echo $obj_empleado->nro_documento; ?>"/>
         </div>
     </div>
     <div class="col-4">
