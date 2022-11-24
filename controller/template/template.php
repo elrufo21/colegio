@@ -26,6 +26,9 @@ class ViewController {
     public function tipo_empleados(){
         include "view/tipo_empleados.php";
     }
+    public function profesores(){
+        include "view/profesores.php";
+    }
 
 
     public function session(){
