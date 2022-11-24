@@ -22,6 +22,7 @@ class Empleado extends cn{
         $query = "INSERT INTO empleado VALUES(0,'$this->nombres','$this->apellido_paterno','$this->apellido_materno',
         '$this->nro_documento','$this->direccion','$this->genero','$this->id_tipo_empleado','$this->nro_celular',
         '$this->email','$this->nro_cuenta','$this->password',1,now(),now())";
+
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;
@@ -64,6 +65,7 @@ class Empleado extends cn{
         }
         mysqli_close($this->f_cn());
     }
+    
     public function estado($estado){
         $query= "UPDATE empleado SET estado='$estado'";
         $rs=mysqli_query($this->f_cn(),$query);

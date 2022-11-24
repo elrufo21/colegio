@@ -7,7 +7,9 @@ class ViewController {
     public function empleados(){
         include "view/empleados.php";
     }
-
+    public function matricula_lumnos(){
+        include "view/matricula_alumno.php";
+    }
     
 
 
@@ -16,6 +18,8 @@ class ViewController {
     public function tipo_empleados(){
         include "view/tipo_empleados.php";
     }
+
+
     public function session(){
         if(!isset($_SESSION['nombres'])){
             header("Location: view/modules/login/login.php");
