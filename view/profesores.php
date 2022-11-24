@@ -223,32 +223,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <i class="far fa-circle nav-icon"></i>
                     <p>Matricula de alumno</p>
                   </a>
-                  <li class="nav-item">
-                  <a href="asistencia_alumno.php" class="nav-link" id="">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Asistencia Alumno</p>
-                    </a>
                 </li>
-                <li class="nav-item">
-                  <a href="asistencia_empleado.php" class="nav-link" id="">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Asistencia Empleado</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                  <a href="asistencia_profesor.php" class="nav-link" id="">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Asistencia Profesor</p>
-                    </a>
-                </li>
-                
-                <li class="nav-item">
-                  <a href="profesores.php" class="nav-link" id="">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Profesor</p>
-                  </a>
-                </li>
-                
                 <li class="nav-item">
                   <a href="" class="nav-link" id="cerrar_sesion">
                     <i class="far fa-circle nav-icon"></i>
@@ -272,12 +247,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Empleados</h1>
+              <h1 class="m-0 text-dark">Registro de profesores</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Empleados</li>
+                <li class="breadcrumb-item active">Profesores</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -293,10 +268,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card">
               <div class="card-header">
 
-                <button class="btn btn-info new-modal-empleado" data-id="0"><i class="fas fa-plus-circle" aria-hidden="true"></i> Nuevo</button>
+                <button class="btn btn-info new-modal-profesor" data-id="0"><i class="fas fa-plus-circle" aria-hidden="true"></i> Nuevo</button>
 
               </div>
-              <div class="card-body table-empleado">
+              <div class="card-body table-profesores">
                 <!-- /.Aqui se cargar lista -->
               </div>
               <!-- /.card-body -->
@@ -306,11 +281,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- INICIA MODAL Tipo marca observacion-->
     </div>
-    <div class="modal fade" id="modal-form-empleado">
+    <div class="modal fade" id="modal-form-profesores">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class=" modal-body">
-            <form class="form_tipo_marca_observacion" id="form_empleado">
+            <form class="form_tipo_marca_observacion" id="form_profesores">
 
             </form>
           </div>
@@ -387,9 +362,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="view/dist/js/adminlte.min.js"></script>
   <script src="view/js/toastr.min.js"></script>
 
-  <script src="view/js/js-empleados.js"></script>
+  <script src="view/js/js-profesores.js"></script>
   <script>
-    list_empleados();
+    list_profesores();
   </script>
 </body>
 
