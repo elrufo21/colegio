@@ -218,15 +218,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a href="asistencia_alumno.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Asistencia Alumno</p>
+                </li>
+                <li class="nav-item">
+                  <a href="asistencia_empleado.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Asistencia Empleado</p>
+                </li>
+                <li class="nav-item">
+                  <a href="asistencia_profesor.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Asistencia Profesor/p>
+                </li>
+                <li class="nav-item">
                   <a href="matricula_alumnos.php" class="nav-link" id="">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Matricula de alumno</p>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="asistencia.php" class="nav-link" id="">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Asistencia</p>
                   </a>
                 </li>
                 <li class="nav-item">
