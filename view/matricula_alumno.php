@@ -25,17 +25,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contactoss</a>
-                </li>
-            </ul>
+
 
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
@@ -219,11 +209,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                            <a href="asistencia.php" class="nav-link" id="">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Asistencia</p>
+                                <li class="nav-item">
                                     <a href="matricul_alumnos.php" class="nav-link active" id="">
                                         <i class="far fa-circle nav-icon "></i>
                                         <p>Matricula de alumno</p>
                                     </a>
+                                    
                                 </li>
+                                <li class="nav-item">
+                                <a href="profesor.php" class="nav-link" id="">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Profesor</p>
+                                </a>
+                                </li>
+                                
                                 <li class="nav-item">
                                     <a href="" class="nav-link" id="cerrar_sesion">
                                         <i class="far fa-circle nav-icon"></i>
