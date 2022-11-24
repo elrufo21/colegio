@@ -10,7 +10,15 @@ class ViewController {
     public function matricula_lumnos(){
         include "view/matricula_alumno.php";
     }
-    
+    public function asistencia_alumno(){
+        include "view/asistencia_alumno.php";
+    }
+    public function asistencia_profesor(){
+        include "view/asistencia_profesor.php";
+    }
+    public function asistencia_empleado(){
+        include "view/asistencia_empleado.php";
+    }
 
 
 
