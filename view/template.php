@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Starter</title>
+  <title>Colegio SC</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -164,7 +164,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Brand Logo -->
       <a href="index3.html" class="brand-link">
         <img src="view/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+        <span class="brand-text font-weight-light">Colegio CS</span>
       </a>
 
       <!-- Sidebar -->
@@ -218,9 +218,35 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link" id="">
+                  <a href="asistencia_alumno.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Asistencia Alumno</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="asistencia_empleado.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Asistencia Empleado</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="asistencia_profesor.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Asistencia Profesor</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="matricula_alumnos.php" class="nav-link" id="">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Matricula de alumno</p>
+                  </a>
+                </li>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="profesor.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Profesor</p>
                   </a>
                 </li>
                 <li class="nav-item">

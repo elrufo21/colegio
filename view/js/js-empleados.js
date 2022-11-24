@@ -1,4 +1,19 @@
 
+$(document).on("click","#cerrar_sesion",function(){
+    var url = "controller/login/logout/cerrar_sesion.php";
+    $.get(url,function(data){
+        console.log("s");
+    })
+})
+//
+function list_empleados(){
+    $.ajax({
+        url: "controller/empleados/list.php",
+    }).done(function(data){
+        $(".table-empleado").empty();
+        $(".table-empleado").append(data);
+    })
+}
 
 $(document).on("click" , ".new-modal-empleado" , function(){
     var id = $(this).data("id");
@@ -9,13 +24,24 @@ $(document).on("click" , ".new-modal-empleado" , function(){
     })
     $("#modal-form-empleado").modal("show");
 })
-function list_empleados(){
-    $.ajax({
-        url: "controller/empleados/list.php",
-    }).done(function(data){
-        $(".table-empleado").empty();
-        $(".table-empleado").append(data);
-    })
-}
 
+
+$(document).on("click","#btn_save",function(){
+    var data = $("#form_empleado").serialize();
+    $.ajax({
+        url: 'controller/empleados/accion.php',
+        type: 'POST',
+        data: data,
+        success: function (data) {
+            if(data=="true"){
+                list_empleados();
+                toastr.success("Datos guardados correctamente");
+                $('#modal-form-empleado').modal('hide');
+            }else{
+                toastr.error("Hubo un error");
+                list_empleados();
+            }
+        }
+    })
+})
 
