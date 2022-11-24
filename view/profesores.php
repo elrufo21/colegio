@@ -268,7 +268,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card">
               <div class="card-header">
 
-                <button class="btn btn-info new-modal-empleado" data-id="0"><i class="fas fa-plus-circle" aria-hidden="true"></i> Nuevo</button>
+                <button class="btn btn-info new-modal-profesor" data-id="0"><i class="fas fa-plus-circle" aria-hidden="true"></i> Nuevo</button>
 
               </div>
               <div class="card-body table-profesores">
@@ -281,11 +281,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- INICIA MODAL Tipo marca observacion-->
     </div>
-    <div class="modal fade" id="modal-form-empleado">
+    <div class="modal fade" id="modal-form-profesores">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class=" modal-body">
-            <form class="form_tipo_marca_observacion" id="form_empleado">
+            <form class="form_tipo_marca_observacion" id="form_profesores">
 
             </form>
           </div>

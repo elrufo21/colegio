@@ -34,7 +34,7 @@ $count = 0;
             }
             if ($_SESSION['rango'] == "admin") {
                 $btn_editar = '<button data-id="' . $fila["id_profesor"] . '"
-                 title="Mas detalle" class="btn btn-xs btn-warning new-modal-empleado"><i class="far fa-edit"></i></button>';
+                 title="Mas detalle" class="btn btn-xs btn-warning new-modal-profesor"><i class="far fa-edit"></i></button>';
             } else {
                 $btn_editar = "";
             }
@@ -64,7 +64,7 @@ $count = 0;
                     <?php
                     echo $btn_editar;
                     echo $accion; ?>
-                    <button data-id="<?php echo $fila['id_profesor'] ?>" title="Modificar" class="btn btn-xs btn-primary new-modal-show-requerimiento"><i class="far fa-eye"></i></button>
+                    <button data-id="<?php echo $fila['id_profesor'] ?>" title="Modificar" class="btn btn-xs btn-primary new-modal-show-profesor"><i class="far fa-eye"></i></button>
                 </td>
             </tr>
         <?php } ?>

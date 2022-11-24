@@ -8,6 +8,7 @@ class profesores extends cn{
     var $numero_documento;
     var $fecha_nacimiento;
     var $direccion;
+    var $genero;
     var $email;
     var $foto;
     var $curricullum;
@@ -20,35 +21,37 @@ class profesores extends cn{
     
 
     public function create(){
-        $query = "INSERT INTO profesores";
+        $query = "INSERT INTO profesores VALUES(0,'$this->nomrbes','$this->apellido_paterno','$this->apellido_materno','$this->numero_documento','$this->fecha_nacimiento',
+        '$this->direccion','$this->genero','$this->email','$this->foto','$this->curricullum','$this->curso','$this->nro_celular','$this->passwrd',1,now(),now())";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;
     }
     public function read(){
-        $query = "SELECT * FROM profesores";
+        $query = "SELECT * FROM profesores ";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;
     }
     public function update(){
         $query = "UPDATE profesores SET nombres='$this->nombres',apellido_paterno='$this->apellido_paterno',apellido_materno='$this->apellido_materno'
-        ,direccion='$this->direccion',email='$this->email',foto='$this->foto',nro_celular='$this->nro_celular' WHERE id_profesor = '$this->id_profesor'";
+        ,direccion='$this->direccion',genero='$this->genero',email='$this->email',foto='$this->foto',nro_celular='$this->nro_celular' WHERE id_profesor = '$this->id_profesor'";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;
     }
     public function consult(){
-        $query = "SELECT * FROM profesores WHERE id_profesor = '$this->profesor'" ;
+        $query = "SELECT * FROM profesores WHERE id_profesor = '$this->id_profesor'" ;
         $rs = mysqli_query($this->f_cn(), $query);
         if ($fila = mysqli_fetch_array($rs)) {
             $this->id_profesor = $fila['id_profesor'];
-            $this->nomrbes = $fila['nomrbes'];
+            $this->nomrbes = $fila['nombres'];
             $this->apellido_paterno = $fila['apellido_paterno'];
             $this->apellido_materno = $fila['apellido_materno'];
             $this->numero_documento = $fila['numero_documento'];
             $this->fecha_nacimiento = $fila['fecha_nacimiento'];
             $this->direccion = $fila['direccion'];
+            $this->genero = $fila['genero'];
             $this->email = $fila['email'];
             $this->foto = $fila['foto'];
             $this->curricullum = $fila['curricullum'];

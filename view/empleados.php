@@ -243,7 +243,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </li>
                 
                 <li class="nav-item">
-                  <a href="profesor.php" class="nav-link" id="">
+                  <a href="profesores.php" class="nav-link" id="">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Profesor</p>
                   </a>
