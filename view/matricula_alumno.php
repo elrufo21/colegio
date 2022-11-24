@@ -221,7 +221,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <li class="nav-item">
                                 <a href="asistencia_profesor.php" class="nav-link" id="">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Asistencia Profesor/p>
+                                    <p>Asistencia Profesor</p>
                                 </li>
                                 <li class="nav-item">
                                     <a href="matricul_alumnos.php" class="nav-link active" id="">
