@@ -5,6 +5,15 @@ $(document).on("click","#cerrar_sesion",function(){
         console.log("s");
     })
 })
+//
+function list_empleados(){
+    $.ajax({
+        url: "controller/empleados/list.php",
+    }).done(function(data){
+        $(".table-empleado").empty();
+        $(".table-empleado").append(data);
+    })
+}
 
 $(document).on("click" , ".new-modal-empleado" , function(){
     var id = $(this).data("id");
@@ -15,14 +24,7 @@ $(document).on("click" , ".new-modal-empleado" , function(){
     })
     $("#modal-form-empleado").modal("show");
 })
-function list_empleados(){
-    $.ajax({
-        url: "controller/empleados/list.php",
-    }).done(function(data){
-        $(".table-empleado").empty();
-        $(".table-empleado").append(data);
-    })
-}
+
 
 $(document).on("click","#btn_save",function(){
     var data = $("#form_empleado").serialize();

@@ -34,7 +34,7 @@ $count =0;
             }
             if ($_SESSION['rango'] == "admin") {
                 $btn_editar = '<button data-id="' . $fila["id_empleado"] . '"
-                 title="Mas detalle" class="btn btn-xs btn-warning new-modal-requerimiento"><i class="far fa-edit"></i></button>';
+                 title="Mas detalle" class="btn btn-xs btn-warning new-modal-empleado"><i class="far fa-edit"></i></button>';
             } else {
                 $btn_editar = "";
             }

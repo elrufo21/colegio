@@ -16,6 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="view/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="view/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="view/css/toastr.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -218,7 +219,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link" id="">
+                  <a href="matricula_alumnos.php" class="nav-link" id="">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Matricula de alumno</p>
                   </a>
@@ -279,80 +280,75 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
 
         <!-- INICIA MODAL Tipo marca observacion-->
-        <div class="modal fade" id="modal-form-empleado">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">Tipo marca observacion</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form class="form_tipo_marca_observacion" id="form_empleado">
-
-                </form>
-              </div>
-              <div class="modal-footer" style="justify-content:center;">
-                <button type="button" class="btn btn-success" id="btn_save">
-                  <span class="glyphicon glyphicon-check"></span><i class="fas fa-save"></i> Guardar
-                </button>
-                <button type="button" class="btn btn-warning" data-dismiss="modal">
-                  <span class="glyphicon glyphicon-remove"></span><i class="fas fa-times-circle"></i> Cerrar
-                </button>
-              </div>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-        </div>
-        <!-- FIN MODAL Tipo marca observacion -->
-
-        <!-- INICIA MODAL TIPO SHOW -->
-        <div class="modal fade" id="modal-form-show-tipo_marca_observacion">
-          <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">Detalle tipo marca observacion</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form id="form_show_tipo_marca_observacion">
-
-                </form>
-              </div>
-              <div class="modal-footer ">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-              </div>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-        </div>
-        <!-- FIN MODAL TIPO SHOW -->
-
-      </section>
-      <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
+    <div class="modal fade" id="modal-form-empleado">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class=" modal-body">
+            <form class="form_tipo_marca_observacion" id="form_empleado">
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-      <div class="p-3">
-        <h5>Title</h5>
-        <p>Sidebar content</p>
-      </div>
-    </aside>
-    <!-- /.control-sidebar -->
+            </form>
+          </div>
+          <div class="modal-footer" style="justify-content:center;">
+            <button type="button" class="btn btn-success" id="btn_save">
+              <span class="glyphicon glyphicon-check"></span><i class="fas fa-save"></i> Guardar
+            </button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">
+              <span class="glyphicon glyphicon-remove"></span><i class="fas fa-times-circle"></i> Cerrar
+            </button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+    <!-- FIN MODAL Tipo marca observacion -->
 
-    <!-- Main Footer -->
-    <footer class="main-footer">
-      <!-- To the right -->
-      <div class="float-right d-none d-sm-inline">
-        Anything you want
-      </div>
-      <!-- Default to the left -->
-      <strong>Copyright &copy; 2022-2022 <a href="https://elrufo21.github.io/">E-Rufo.io</a>.</strong> Todos los derechos reservados.
-    </footer>
+    <!-- INICIA MODAL TIPO SHOW -->
+    <div class="modal fade" id="modal-form-show-tipo_marca_observacion">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Detalle tipo marca observacion</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form_show_tipo_marca_observacion">
+
+            </form>
+          </div>
+          <div class="modal-footer ">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+    <!-- FIN MODAL TIPO SHOW -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2022-2022 <a href="https://elrufo21.github.io/">E-Rufo.io</a>.</strong> Todos los derechos reservados.
+  </footer>
   </div>
   <!-- ./wrapper -->
 
@@ -364,7 +360,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="view/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="view/dist/js/adminlte.min.js"></script>
-
+  <script src="view/js/toastr.min.js"></script>
 
   <script src="view/js/js-empleados.js"></script>
   <script>
