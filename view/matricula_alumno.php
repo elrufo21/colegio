@@ -182,73 +182,75 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 </div>
 
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
+ <!-- Sidebar Menu -->
+ <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                        <li class="nav-item menu-open">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Sideral Carrion
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview ">
-                                <li class="nav-item">
-                                    <a href="index.php" class="nav-link ">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Active Page</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="empleados.php" class="nav-link" id="new_empleado">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Empleados</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="asistencia_alumno.php" class="nav-link" id="">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Asistencia Alumno</p>
-                                </li>
-                                <li class="nav-item">
-                                <a href="asistencia_empleado.php" class="nav-link" id="">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Asistencia Empleado</p>
-                                </li>
-                                <li class="nav-item">
-                                <a href="asistencia_profesor.php" class="nav-link" id="">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Asistencia Profesor</p>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="matricul_alumnos.php" class="nav-link active" id="">
-                                        <i class="far fa-circle nav-icon "></i>
-                                        <p>Matricula de alumno</p>
-                                    </a>
-                                    
-                                </li>
-                                <li class="nav-item">
-                                <a href="profesor.php" class="nav-link" id="">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Profesor</p>
-                                </a>
-                                </li>
-                                
-                                <li class="nav-item">
-                                    <a href="" class="nav-link" id="cerrar_sesion">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Cerrar sesion</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+            <li class="nav-item menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Sideral Carrion
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview ">
+                <li class="nav-item">
+                  <a href="index.php" class="nav-link ">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Active Page</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="empleados.php" class="nav-link " id="new_empleado">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Empleados</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="matricula_alumnos.php" class="nav-link active" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Matricula de alumno</p>
+                  </a>
+                  <li class="nav-item">
+                  <a href="asistencia_alumno.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Asistencia Alumno</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="asistencia_empleado.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Asistencia Empleado</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="asistencia_profesor.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Asistencia Profesor</p>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                  <a href="profesores.php" class="nav-link" id="">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Profesor</p>
+                  </a>
+                </li>
+                
+                <li class="nav-item">
+                  <a href="" class="nav-link" id="cerrar_sesion">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Cerrar sesion</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-                    </ul>
-                </nav>
-                <!-- /.sidebar-menu -->
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
         </aside>

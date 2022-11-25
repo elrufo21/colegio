@@ -34,7 +34,7 @@ class profesores extends cn{
         return $rs;
     }
     public function update(){
-        $query = "UPDATE profesores SET nombres='$this->nombres',apellido_paterno='$this->apellido_paterno',apellido_materno='$this->apellido_materno'
+        $query = "UPDATE profesores SET nombres='$this->nomrbes',apellido_paterno='$this->apellido_paterno',apellido_materno='$this->apellido_materno'
         ,direccion='$this->direccion',genero='$this->genero',email='$this->email',foto='$this->foto',nro_celular='$this->nro_celular' WHERE id_profesor = '$this->id_profesor'";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());

@@ -129,6 +129,21 @@ $obj_profesor->consult();
             <input type="text" class="form-control valid validText" id="txt_num_cel" name="txt_num_cel" value="<?php echo $obj_profesor->nro_celular; ?>"/>
         </div>
     </div>
+    <?php if($obj_profesor->id_profesor!=0){
+    ?>
+    <div class="col-4">
+        <label for="txt_name">Contraseña <i class="text-danger" title="Ingrese asunto">*</i></label>
+        <label class="text-danger msj_txt_name"></label>  
+        <div class="input-group mb-2">
+            <div class="input-group-prepend ">
+            <span class="input-group-text"><i class="fas fa-align-left"></i></span>
+            </div>
+            <input type="text" class="form-control valid validText" id="txt_psswr" name="txt_psswr" value="<?php echo $obj_profesor->passwrd; ?>"/>
+        </div>
+    </div>
+    <?php }
+    ?>
+    
     
     
 </div>
