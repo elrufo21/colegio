@@ -29,7 +29,7 @@ class Empleado extends cn{
 
     }
     public function read(){
-        $query = "SELECT * FROM empleado";
+        $query = "SELECT e.*,tp.tipo_empleado FROM empleado e INNER JOIN tipo_empleado tp ON e.id_tipo_empleado = tp.id_tipo_empleado";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;

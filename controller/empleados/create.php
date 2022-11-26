@@ -1,9 +1,12 @@
 <?php 
 include_once "../../model/empleado.php";
+include_once "../../model/tipo_empleado.php";
+
 $obj_empleado=new Empleado();
 $obj_empleado->id_empleado=$_REQUEST['id'];
 $obj_empleado->consult();
 
+$obj_tipo_empelado = new tipo_empleado();
 ?>
 
 <div class="row">
@@ -65,17 +68,28 @@ $obj_empleado->consult();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txt_genero" name="txt_genero" value="<?php echo $obj_empleado->genero; ?>"/>
+            <select class="form-control select_select" name="slt_genero" id="slt_genero">
+                <option value="0">Seleccionar</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
         </div>
     </div>
     <div class="col-4">
-        <label for="txt_name">Tipo de empleado <i class="text-danger" title="Ingrese asunto">*</i></label>
-        <label class="text-danger msj_txt_name"></label>  
+        <label for="slt_t_d">Tipo de empleado <i class="text-danger" title="Seleccione Tipo documento">*</i> </label>
+        <label class="text-danger msj-slt_t_d"></label>
         <div class="input-group mb-2">
-            <div class="input-group-prepend ">
-            <span class="input-group-text"><i class="fas fa-align-left"></i></span>
-            </div>
-            <input type="text" class="form-control valid validText" id="txt_tipo_emp" name="txt_tipo_emp" value="<?php echo $obj_empleado->id_tipo_empleado; ?>"/>
+        <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fab fa-product-hunt"></i></span>
+        </div>
+        <select class="form-control select_select" name="slt_t_d" id="slt_t_d">
+            <option value="0">SELECIONAR</option>
+            <?php $rs_tipo_empleado=$obj_tipo_empelado->combo();
+                while($fila=mysqli_fetch_assoc($rs_tipo_empleado)){
+            ?>
+            <option <?php if($obj_empleado->id_tipo_empleado==$fila["id_tipo_empleado"]){ echo "selected";}?> value="<?php echo $fila["id_tipo_empleado"]?>"><?php echo $fila["tipo_empleado"]?></option>
+                <?php }?>
+        </select>
         </div>
     </div>
     <div class="col-4">
