@@ -82,7 +82,7 @@ $obj_tipo_empelado = new tipo_empleado();
         <div class="input-group-prepend">
             <span class="input-group-text"><i class="fab fa-product-hunt"></i></span>
         </div>
-        <select class="form-control select_select" name="slt_t_d" id="slt_t_d">
+        <select class="form-control select_select" name="slt_empleado" id="slt_empleado">
             <option value="0">SELECIONAR</option>
             <?php $rs_tipo_empleado=$obj_tipo_empelado->combo();
                 while($fila=mysqli_fetch_assoc($rs_tipo_empleado)){

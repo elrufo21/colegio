@@ -46,7 +46,7 @@ $count =0;
                 <td><?php echo $fila["id_empleado"] ?></td>
                 <td><?php echo $fila["nombres"] . " " . $fila['apellido_paterno'] . " " . $fila['apellido_materno'] ?></td>
                 <td><?php echo $fila['nro_documento'] ?></td>
-                <td><?php echo $fila['id_tipo_empleado'] ?></td>
+                <td><?php echo $fila['tipo_empleado'] ?></td>
                 <td><?php echo $fila['email'] ?></td>
                 <td><?php echo $fila['nro_celular'] ?></td>
                 <td style="color: <?php if ($fila["estado"] == 0) {
