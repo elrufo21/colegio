@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-11-2022 a las 20:22:51
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 7.4.30
+-- Tiempo de generación: 27-11-2022 a las 00:32:50
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -49,6 +49,19 @@ CREATE TABLE `alumnos` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `asistencia_empleado`
+--
+
+CREATE TABLE `asistencia_empleado` (
+  `id_asistencia_empleado` int(11) NOT NULL,
+  `id_empleado` int(11) NOT NULL,
+  `asistencia` varchar(100) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `empleado`
 --
 
@@ -69,6 +82,72 @@ CREATE TABLE `empleado` (
   `fecharegistro` date NOT NULL,
   `fechaactualiza` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `empleado`
+--
+
+INSERT INTO `empleado` (`id_empleado`, `nombres`, `apellido_paterno`, `apellido_materno`, `nro_documento`, `direccion`, `genero`, `id_tipo_empleado`, `nro_celular`, `email`, `nro_cuenta`, `password`, `estado`, `fecharegistro`, `fechaactualiza`) VALUES
+(1, 'Sol Elizabeth', 'Nieto', 'Chuco', '12345678', 'calle calle 123', 'Femenino', 0, '987987987', 'ss@gmail.com', '12345678', 'tczochnldbm3n', 1, '2022-11-26', '2022-11-26'),
+(2, 'Mayra', 'Cervantes ', 'Santivanez', '12345678', '123456', 'Femenino', 2, '123546897', '132@gmail.com', '1234569', '3ipde', 1, '2022-11-26', '2022-11-26');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `profesores`
+--
+
+CREATE TABLE `profesores` (
+  `id_profesor` int(11) NOT NULL,
+  `nombres` varchar(100) NOT NULL,
+  `apellido_paterno` varchar(100) NOT NULL,
+  `apellido_materno` varchar(100) NOT NULL,
+  `numero_documento` varchar(15) NOT NULL,
+  `fecha_nacimiento` date NOT NULL,
+  `direccion` varchar(200) NOT NULL,
+  `genero` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `foto` varchar(200) NOT NULL,
+  `curricullum` varchar(200) NOT NULL,
+  `curso` varchar(100) NOT NULL,
+  `nro_celular` varchar(9) NOT NULL,
+  `passwrd` varchar(200) NOT NULL,
+  `estado` int(11) NOT NULL,
+  `fecha_registro` date NOT NULL,
+  `fecha_actualiza` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `profesores`
+--
+
+INSERT INTO `profesores` (`id_profesor`, `nombres`, `apellido_paterno`, `apellido_materno`, `numero_documento`, `fecha_nacimiento`, `direccion`, `genero`, `email`, `foto`, `curricullum`, `curso`, `nro_celular`, `passwrd`, `estado`, `fecha_registro`, `fecha_actualiza`) VALUES
+(1, '', '', '', '', '0000-00-00', '', '', '', '', '', '', '', '', 1, '2022-11-24', '2022-11-24'),
+(2, 'Jesus Andres', 'Sideral ', 'Carrion', '12345678', '0013-03-12', '123456', '1', '123', '132', '321', '321', '32213221', '', 1, '2022-11-24', '2022-11-24'),
+(3, 'hesus', 'Lujan', 'Carrion', '12345678', '0002-03-23', '123', '1321', '321', '3221', '321', '3221', '3221', '5uqf81s1ackg', 1, '2022-11-24', '2022-11-24');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo_empleado`
+--
+
+CREATE TABLE `tipo_empleado` (
+  `id_tipo_empleado` int(11) NOT NULL,
+  `tipo_empleado` varchar(100) NOT NULL,
+  `estado` int(11) NOT NULL,
+  `fecha_registro` date NOT NULL,
+  `fecha_actualiza` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tipo_empleado`
+--
+
+INSERT INTO `tipo_empleado` (`id_tipo_empleado`, `tipo_empleado`, `estado`, `fecha_registro`, `fecha_actualiza`) VALUES
+(1, 'Limpieza', 1, '2022-11-26', '2022-11-26'),
+(2, 'Auxiliar', 1, '2022-11-26', '2022-11-26'),
+(3, 'Secretariado', 1, '2022-11-26', '2022-11-26');
 
 -- --------------------------------------------------------
 
@@ -111,10 +190,28 @@ ALTER TABLE `alumnos`
   ADD PRIMARY KEY (`id_alumno`);
 
 --
+-- Indices de la tabla `asistencia_empleado`
+--
+ALTER TABLE `asistencia_empleado`
+  ADD PRIMARY KEY (`id_asistencia_empleado`);
+
+--
 -- Indices de la tabla `empleado`
 --
 ALTER TABLE `empleado`
   ADD PRIMARY KEY (`id_empleado`);
+
+--
+-- Indices de la tabla `profesores`
+--
+ALTER TABLE `profesores`
+  ADD PRIMARY KEY (`id_profesor`);
+
+--
+-- Indices de la tabla `tipo_empleado`
+--
+ALTER TABLE `tipo_empleado`
+  ADD PRIMARY KEY (`id_tipo_empleado`);
 
 --
 -- Indices de la tabla `users`
@@ -133,10 +230,28 @@ ALTER TABLE `alumnos`
   MODIFY `id_alumno` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `asistencia_empleado`
+--
+ALTER TABLE `asistencia_empleado`
+  MODIFY `id_asistencia_empleado` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `profesores`
+--
+ALTER TABLE `profesores`
+  MODIFY `id_profesor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `tipo_empleado`
+--
+ALTER TABLE `tipo_empleado`
+  MODIFY `id_tipo_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
