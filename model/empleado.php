@@ -35,7 +35,7 @@ class Empleado extends cn{
         return $rs;
     }
     public function update(){
-        $query = "UPDATE empleado SET nomres='$this->nombres',apellido_paterno='$this->apellido_paterno',apellido_materno='$this->apellido_materno',
+        $query = "UPDATE empleado SET nombres='$this->nombres',apellido_paterno='$this->apellido_paterno',apellido_materno='$this->apellido_materno',
         nro_documento='$this->nro_documento',direccion='$this->direccion',genero='$this->genero',id_tipo_empleado='$this->id_tipo_empleado',
         nro_celular='$this->nro_celular',email='$this->email',nro_cuenta='$this->nro_cuenta' WHERE id_empleado='$this->id_empleado'" ;
         $rs = mysqli_query($this->f_cn(),$query);
