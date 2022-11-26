@@ -7,7 +7,6 @@ $(document).on("click","#btn_ingresar",function() {
         success: function(data){
             if(data=="true"){
                 window.location.href="../../../index.php";
-                
             }
             else if (data=="false") {
                 alert("Credenciales incorrectas");
