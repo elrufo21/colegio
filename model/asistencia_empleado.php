@@ -34,8 +34,8 @@ class asistencia_empleado extends cn {
             $this->asistencia = $fila['asistencia_empleado'];
             $this->id_empleado=$fila['id_empleado'];
             $this->fecha=$fila['fecha'];
-
         }
+        mysqli_close($this->f_cn());
     }
 
 }
