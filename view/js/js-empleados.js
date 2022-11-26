@@ -33,11 +33,13 @@ $(document).on("click","#btn_save",function(){
         type: 'POST',
         data: data,
         success: function (data) {
+            console.log(data);
             if(data=="true"){
                 list_empleados();
                 toastr.success("Datos guardados correctamente");
                 $('#modal-form-empleado').modal('hide');
             }else{
+                
                 toastr.error("Hubo un error");
                 list_empleados();
             }

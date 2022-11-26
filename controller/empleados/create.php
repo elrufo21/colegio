@@ -69,9 +69,9 @@ $obj_tipo_empelado = new tipo_empleado();
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
             <select class="form-control select_select" name="slt_genero" id="slt_genero">
-                <option value="0">Seleccionar</option>
-                <option value="Masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
+                <option value="0" >Seleccionar</option>
+                <option value="Masculino" <?php if($obj_empleado->genero=="Masculino"){echo "Selected";} ?> >Masculino</option>
+                <option value="Femenino" <?php if($obj_empleado->genero=="Femenino"){echo "Selected";} ?>>Femenino</option>
             </select>
         </div>
     </div>
@@ -82,7 +82,7 @@ $obj_tipo_empelado = new tipo_empleado();
         <div class="input-group-prepend">
             <span class="input-group-text"><i class="fab fa-product-hunt"></i></span>
         </div>
-        <select class="form-control select_select" name="slt_t_d" id="slt_t_d">
+        <select class="form-control select_select" name="slt_empleado" id="slt_empleado">
             <option value="0">SELECIONAR</option>
             <?php $rs_tipo_empleado=$obj_tipo_empelado->combo();
                 while($fila=mysqli_fetch_assoc($rs_tipo_empleado)){
