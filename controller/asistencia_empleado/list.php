@@ -4,6 +4,10 @@ include_once "../../model/asistencia_empleado.php";
 $obj_asistencia_empleado = new asistencia_empleado();
 $rs = $obj_asistencia_empleado->read();
 $count =0;
+
+$obj_asistencia_empleado->nro_documento="12345678";
+$obj_asistencia_empleado->consultDNI();
+echo $obj_asistencia_empleado->id_empleado;
 ?>
 <table id="table_asistencia_empleado" class="table table-bordered table-striped table-sm" style="font-size: 12px;">
     <thead>
