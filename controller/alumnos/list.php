@@ -24,7 +24,7 @@ $count = 0;
         <?php while ($fila = mysqli_fetch_assoc($rs)) {
             $count++;
             if ($fila["estado"] == 0) {
-                $accion = '<button data-id="' . $fila["id_alumnos"] . '" 
+                $accion = '<button data-id="' . $fila["id_alumno"] . '" 
                 title="Activar" class="btn btn-xs btn-success activar-item" id="btn_item' . $fila["id_alumno"] . '">
                 <i class="fas fa-user-check" id="icon_item' . $fila["id_alumno"] . '"></i></button>';
             } else {
@@ -55,7 +55,7 @@ $count = 0;
                     <?php
                     echo $btn_editar;
                     echo $accion; ?>
-                    <button data-id="<?php echo $fila['id_alumnos'] ?>" title="Modificar" class="btn btn-xs btn-primary new-modal-show-alumno"><i class="far fa-eye"></i></button>
+                    <button data-id="<?php echo $fila['id_alumno'] ?>" title="Modificar" class="btn btn-xs btn-primary new-modal-show-alumno"><i class="far fa-eye"></i></button>
                 </td>
 
             </tr>
