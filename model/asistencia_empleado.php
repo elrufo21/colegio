@@ -21,7 +21,7 @@ class asistencia_empleado extends cn {
         return $rs;
     }
     public function update(){
-        $query  = "UPDATE asistencia_empleado SET asistencia='$this->asistencia' WHERE id_asistencia = '$this->asistencia'";
+        $query  = "UPDATE asistencia_empleado SET asistencia='$this->asistencia' WHERE id_empleado = '$this->asistencia'";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;
@@ -34,8 +34,8 @@ class asistencia_empleado extends cn {
             $this->asistencia = $fila['asistencia_empleado'];
             $this->id_empleado=$fila['id_empleado'];
             $this->fecha=$fila['fecha'];
+
         }
-        mysqli_close($this->f_cn());
     }
 
 }
