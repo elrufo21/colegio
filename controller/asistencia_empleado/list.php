@@ -44,7 +44,7 @@ $count =0;
                 <td><?php echo $fila["id_asistencia_empleado"] ?></td>
                 <td><?php echo $fila["nombres"] . " " . $fila['apellido_paterno'] . " " . $fila['apellido_materno'] ?></td>
                 <td><?php echo $fila['asistencia'] ?></td>
-                <td><?php echo $fila['fehca'] ?></td>
+                <td><?php echo $fila['fecha'] ?></td>
                 
                 <td style="color: <?php if ($fila["estado"] == 0) {
                                         echo "red";
@@ -61,24 +61,9 @@ $count =0;
                     <?php
                     echo $btn_editar;
                     echo $accion; ?>
-                    <button data-id="<?php echo $fila['id_asistencia_empleado'] ?>" title="Modificar" class="btn btn-xs btn-primary new-modal-show-asistencia_empleado"><i class="far fa-eye"></i></button>
+                    <button data-id="<?php echo $fila['id_asistencia_empleado'] ?>" title="Modificar" class="btn btn-xs btn-primary new-modal-show-asistencia_profesor"><i class="far fa-eye"></i></button>
                 </td>
             </tr>
         <?php } ?>
     </tbody>
 </table>
-<!--
-<script>
-    $(function() {
-
-        $("#table_empleados").DataTable({
-            "paging": true,
-            "lengthChange": true,
-            "searching": true,
-            "ordering": false,
-            "info": true,
-            "autoWidth": false,
-        });
-
-    });
-</script> -->

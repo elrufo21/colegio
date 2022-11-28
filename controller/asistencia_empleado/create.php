@@ -1,9 +1,9 @@
 <?php 
 include_once "../../model/asistencia_empleado.php";
 
-$asistencia_empleado=new asistencia_empleado();
-$asistencia_empleado->id_empleado=$_REQUEST['id'];
-$asistencia_empleado->consult();
+$asistencia_profesor=new asistencia_empleado();
+$asistencia_profesor->id_empleado=$_REQUEST['id'];
+$asistencia_profesor->consult();
 
 ?>
 
