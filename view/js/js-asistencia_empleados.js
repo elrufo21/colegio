@@ -26,6 +26,10 @@ $(document).on("click","#btn_save",function(){
                 list_asistencia_empleados();
                 toastr.success("Datos guardados correctamente");
                 $('#modal-form-asistencia_empleado').modal('hide');
+            }
+            else if(data=="error"){
+                toastr.error("Ya ha registrado su asistencia");
+                list_asistencia_empleados();
             }else{
                 toastr.error("Hubo un error");
                 list_asistencia_empleados();

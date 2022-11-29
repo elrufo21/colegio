@@ -72,6 +72,29 @@ class Empleado extends cn{
         mysqli_close($this->f_cn());
         return $rs;
     }
+    public function consultDNI()
+    {
+        $query = "SELECT * FROM empleado WHERE nro_documento ='$this->nro_documento'";
+        $rs = mysqli_query($this->f_cn(), $query);
+        if ($fila = mysqli_fetch_array($rs)) {
+            $this->id_empleado = $fila["id_empleado"];
+            $this->nombres=$fila["nombres"];
+            $this->apellido_paterno = $fila["apellido_paterno"];
+            $this->apellido_materno = $fila["apellido_materno"];
+            $this->nro_documento = $fila["nro_documento"];
+            $this->direccion = $fila["direccion"];
+            $this->genero = $fila["genero"];
+            $this->id_tipo_empleado=$fila["id_tipo_empleado"];
+            $this->nro_celular = $fila["nro_celular"];
+            $this->email = $fila["email"];
+            $this->nro_cuenta = $fila["nro_cuenta"];
+            $this->password = $fila["password"];
+            $this->estado = $fila["estado"];
+            $this->fecharegistro = $fila["fecharegistro"];
+            $this->fechaactualiza = $fila["fechaactualiza"];
+        }
+        mysqli_close($this->f_cn());
+    }
     
     
 }

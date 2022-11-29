@@ -7,9 +7,11 @@ class asistencia_empleado extends cn {
     var $asistencia;
     var $fecha;
     var $nro_documento;
+    var $hora_ingreso;
+    var $hora_salida;
 
     public function create(){
-        $query = "INSERT INTO asistencia_empleado VALUES(0,'$this->id_empleado','$this->asistencia',now())";
+        $query = "INSERT INTO asistencia_empleado VALUES(0,'$this->id_empleado','$this->asistencia',now(),'$this->hora_ingreso','')";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;
@@ -47,6 +49,15 @@ class asistencia_empleado extends cn {
         }
         mysqli_close($this->f_cn());
 
+    }
+    public function consultDia($fecha){
+        $query = "SELECT count(*) as contar FROM asistencia_empleado WHERE fecha='$fecha'";
+        $rs = mysqli_query($this->f_cn(), $query);
+        if ($fila = mysqli_fetch_array($rs)) {
+            $count=$fila['contar'];
+        }
+        mysqli_close($this->f_cn());
+        return $count;
     }
 
 }

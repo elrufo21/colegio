@@ -15,9 +15,11 @@ class user extends cn{
     var $estado;
     var $rango;
     var $nombre_usuario;
-
+    var $password;
     public function create(){
-        $query="INSERT INTO users VALUES()";
+        $query="INSERT INTO users VALUES(0,'$this->nombres','$this->apellido_paterno',
+        '$this->apellido_materno','$this->dni','$this->email','$this->celular',now(),
+        now(),now(),1,'$this->rango','$this->nombre_usuario','$this->password')";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;
@@ -46,6 +48,7 @@ class user extends cn{
             $this->fecha_actualiza=$fila["fecha_actualiza"];
             $this->estado=$fila["estado"];
             $this->rango=$fila["rango"];
+            $this->password=$fila['password'];
             $this->nombre_usuario=$fila["nombre_usuario"];
         }
         mysqli_close($this->f_cn());
