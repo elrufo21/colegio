@@ -1,9 +1,12 @@
 <?php
 session_start();
 include_once "../../model/asistencia_empleado.php";
+ini_set('date.timezone','America/Lima');
 $obj_asistencia_empleado = new asistencia_empleado();
 $rs = $obj_asistencia_empleado->read();
 $count =0;
+
+
 ?>
 <table id="table_asistencia_empleado" class="table table-bordered table-striped table-sm" style="font-size: 12px;">
     <thead>
@@ -13,7 +16,6 @@ $count =0;
             <th>Empleado</th>
             <th>Asistencia</th>
             <th>Fecha</th>
-            <th>Estado</th>
             <th>Acciones</th>
 
         </tr>
@@ -21,15 +23,7 @@ $count =0;
     <tbody>
         <?php while ($fila = mysqli_fetch_assoc($rs)) {
             $count++;
-            if ($fila["estado"] == 0) {
-                $accion = '<button data-id="' . $fila["id_asistencia_empleado"] . '" 
-                title="Activar" class="btn btn-xs btn-success activar-item" id="btn_item' . $fila["id_asistencia_empleado"] . '">
-                <i class="fas fa-user-check" id="icon_item' . $fila["id_asistencia_empleado"] . '"></i></button>';
-            } else {
-                $accion = '<button data-id="' . $fila["id_asistencia_empleado"] . '"     
-                title="Inactivar" class="btn btn-xs btn-danger desactivar-item" id="btn_item' . $fila["id_asistencia_empleado"] . '">
-                <i class="far fa-trash-alt" id="icon_item' . $fila["id_asistencia_empleado"] . '"></i></button>';
-            }
+           
             if ($_SESSION['rango'] == "admin") {
                 $btn_editar = '<button data-id="' . $fila["id_asistencia_empleado"] . '"
                  title="Mas detalle" class="btn btn-xs btn-warning new-modal-empleado"><i class="far fa-edit"></i></button>';
@@ -46,17 +40,6 @@ $count =0;
                 <td><?php echo $fila['asistencia'] ?></td>
                 <td><?php echo $fila['fecha'] ?></td>
                 
-                <td style="color: <?php if ($fila["estado"] == 0) {
-                                        echo "red";
-                                    } else {
-                                        echo "green";
-                                    } ?>;">
-                    <?php if ($fila["estado"] == 0) {
-                        echo "Inactivo";
-                    } else {
-                        echo "Activo";
-                    } ?>
-                </td>
                 <td>
                     <?php
                     echo $btn_editar;

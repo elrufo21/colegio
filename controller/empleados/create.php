@@ -2,11 +2,14 @@
 include_once "../../model/empleado.php";
 include_once "../../model/tipo_empleado.php";
 
+
 $obj_empleado=new Empleado();
 $obj_empleado->id_empleado=$_REQUEST['id'];
 $obj_empleado->consult();
 
 $obj_tipo_empelado = new tipo_empleado();
+
+
 ?>
 
 <div class="row">

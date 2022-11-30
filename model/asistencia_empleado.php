@@ -6,9 +6,12 @@ class asistencia_empleado extends cn {
     var $id_empleado;
     var $asistencia;
     var $fecha;
+    var $nro_documento;
+    var $hora_ingreso;
+    var $hora_salida;
 
     public function create(){
-        $query = "INSERT INTO asistencia_empleado VALUES(0,'$this->id_empleado','$this->asistencia',now())";
+        $query = "INSERT INTO asistencia_empleado VALUES(0,'$this->id_empleado','$this->asistencia',now(),'$this->hora_ingreso','')";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;
@@ -30,12 +33,31 @@ class asistencia_empleado extends cn {
         $query = "SELECT * FROM asistencia_empleado WHERE id_asistencia_empleado = '$this->id_asistencia_empleado'";
         $rs = mysqli_query($this->f_cn(), $query);
         if ($fila = mysqli_fetch_array($rs)) {
-            $this->id_asistencia_empleado=$fila['asistencia_empleado'];
+            $this->id_asistencia_empleado=$fila['id_asistencia_empleado'];
             $this->asistencia = $fila['asistencia_empleado'];
             $this->id_empleado=$fila['id_empleado'];
             $this->fecha=$fila['fecha'];
 
         }
+    }
+    public function consultDNI(){
+        $query = "SELECT id_empleado,nro_documento FROM empleado WHERE nro_documento='$this->nro_documento'";
+        $rs = mysqli_query($this->f_cn(), $query);
+        if ($fila = mysqli_fetch_array($rs)) {
+            $this->id_empleado=$fila['id_empleado'];
+            $this->nro_documento=$fila['nro_documento'];
+        }
+        mysqli_close($this->f_cn());
+
+    }
+    public function consultDia($fecha){
+        $query = "SELECT count(*) as contar FROM asistencia_empleado WHERE fecha='$fecha'";
+        $rs = mysqli_query($this->f_cn(), $query);
+        if ($fila = mysqli_fetch_array($rs)) {
+            $count=$fila['contar'];
+        }
+        mysqli_close($this->f_cn());
+        return $count;
     }
 
 }

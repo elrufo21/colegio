@@ -34,6 +34,7 @@ $(document).on("click","#btn_save",function(){
         data: data,
         success: function (data) {
             console.log(data);
+            alert(data);
             if(data=="true"){
                 list_empleados();
                 toastr.success("Datos guardados correctamente");
