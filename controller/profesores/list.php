@@ -70,11 +70,11 @@ $count = 0;
         <?php } ?>
     </tbody>
 </table>
-<!--
+
 <script>
     $(function() {
 
-        $("#table_empleados").DataTable({
+        $("#table_profesores").DataTable({
             "paging": true,
             "lengthChange": true,
             "searching": true,
@@ -84,4 +84,4 @@ $count = 0;
         });
 
     });
-</script> -->
+</script>
