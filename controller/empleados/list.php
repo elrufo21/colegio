@@ -70,7 +70,7 @@ $count =0;
         <?php } ?>
     </tbody>
 </table>
-<!--
+
 <script>
     $(function() {
 
@@ -84,4 +84,4 @@ $count =0;
         });
 
     });
-</script> -->
+</script>

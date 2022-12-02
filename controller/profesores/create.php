@@ -45,7 +45,7 @@ $obj_profesor->consult();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="number" class="form-control valid validText" id="txt_doc" name="txt_doc" max="99999999" value="<?php echo $obj_profesor->numero_documento; ?>"/>
+            <input type="number" class="form-control valid validNumber" id="txt_doc" name="txt_doc" max="99999999" value="<?php echo $obj_profesor->numero_documento; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -55,7 +55,7 @@ $obj_profesor->consult();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txt_direccion" name="txt_direccion" value="<?php echo $obj_profesor->direccion; ?>"/>
+            <input type="text" class="form-control valid ValidTextSpecial" id="txt_direccion" name="txt_direccion" value="<?php echo $obj_profesor->direccion; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -65,7 +65,7 @@ $obj_profesor->consult();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="date" class="form-control valid validText" id="txt_f_nacimiento" name="txt_f_nacimiento" value="<?php echo $obj_profesor->genero; ?>"/>
+            <input type="date" class="form-control valid " id="txt_f_nacimiento" name="txt_f_nacimiento" value="<?php echo $obj_profesor->genero; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -75,7 +75,7 @@ $obj_profesor->consult();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="" name="txt_genero" value="<?php echo $obj_profesor->genero; ?>"/>
+            <input type="text" class="form-control valid " id="" name="txt_genero" value="<?php echo $obj_profesor->genero; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -85,7 +85,7 @@ $obj_profesor->consult();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txt_email" name="txt_email" value="<?php echo $obj_profesor->email; ?>"/>
+            <input type="text" class="form-control valid validEmail" id="txt_email" name="txt_email" value="<?php echo $obj_profesor->email; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -95,7 +95,7 @@ $obj_profesor->consult();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txt_foto" name="txt_foto" value="<?php echo $obj_profesor->foto; ?>"/>
+            <input type="text" class="form-control valid " id="txt_foto" name="txt_foto" value="<?php echo $obj_profesor->foto; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -105,7 +105,7 @@ $obj_profesor->consult();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txt_cv" name="txt_cv" value="<?php echo $obj_profesor->curricullum; ?>"/>
+            <input type="text" class="form-control " id="txt_cv" name="txt_cv" value="<?php echo $obj_profesor->curricullum; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -126,24 +126,19 @@ $obj_profesor->consult();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txt_num_cel" name="txt_num_cel" value="<?php echo $obj_profesor->nro_celular; ?>"/>
+            <input type="text" class="form-control valid validNumber" id="txt_num_cel" name="txt_num_cel" value="<?php echo $obj_profesor->nro_celular; ?>"/>
         </div>
     </div>
-    <?php if($obj_profesor->id_profesor!=0){
-    ?>
-    <div class="col-4">
-        <label for="txt_name">Contraseña <i class="text-danger" title="Ingrese asunto">*</i></label>
-        <label class="text-danger msj_txt_name"></label>  
-        <div class="input-group mb-2">
-            <div class="input-group-prepend ">
-            <span class="input-group-text"><i class="fas fa-align-left"></i></span>
-            </div>
-            <input type="text" class="form-control valid validText" id="txt_psswr" name="txt_psswr" value="<?php echo $obj_profesor->passwrd; ?>"/>
-        </div>
-    </div>
-    <?php }
-    ?>
+   
     
     
     
 </div>
+
+<script src="view/js/valid.js"></script>
+<script>
+    fntValidText();
+    fntValidTextSpecial();
+    fntValidEmail();
+    fntValidNumber();
+</script>

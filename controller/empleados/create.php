@@ -51,7 +51,7 @@ $obj_tipo_empelado = new tipo_empleado();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="number" class="form-control valid validText" id="txt_doc" name="txt_doc" max="99999999" value="<?php echo $obj_empleado->nro_documento; ?>"/>
+            <input type="number" class="form-control valid validNumber" id="txt_doc" name="txt_doc" max="99999999" value="<?php echo $obj_empleado->nro_documento; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -61,7 +61,7 @@ $obj_tipo_empelado = new tipo_empleado();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txt_direccion" name="txt_direccion" value="<?php echo $obj_empleado->direccion; ?>"/>
+            <input type="text" class="form-control valid ValidTextSpecial" id="txt_direccion" name="txt_direccion" value="<?php echo $obj_empleado->direccion; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -102,7 +102,7 @@ $obj_tipo_empelado = new tipo_empleado();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txt_num_cel" name="txt_num_cel" value="<?php echo $obj_empleado->nro_celular; ?>"/>
+            <input type="text" class="form-control valid validNumber" id="txt_num_cel" name="txt_num_cel" value="<?php echo $obj_empleado->nro_celular; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -112,7 +112,7 @@ $obj_tipo_empelado = new tipo_empleado();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txt_email" name="txt_email" value="<?php echo $obj_empleado->email; ?>"/>
+            <input type="text" class="form-control valid validEmail" id="txt_email" name="txt_email" value="<?php echo $obj_empleado->email; ?>"/>
         </div>
     </div>
     <div class="col-4">
@@ -122,7 +122,14 @@ $obj_tipo_empelado = new tipo_empleado();
             <div class="input-group-prepend ">
             <span class="input-group-text"><i class="fas fa-align-left"></i></span>
             </div>
-            <input type="text" class="form-control valid validText" id="txr_nro_cuenta" name="txr_nro_cuenta" value="<?php echo $obj_empleado->nro_cuenta; ?>"/>
+            <input type="text" class="form-control valid validNumber" id="txr_nro_cuenta" name="txr_nro_cuenta" value="<?php echo $obj_empleado->nro_cuenta; ?>"/>
         </div>
     </div>
 </div>
+<script src="view/js/valid.js"></script>
+<script>
+    fntValidText();
+    fntValidTextSpecial();
+    fntValidEmail();
+    fntValidNumber();
+</script>

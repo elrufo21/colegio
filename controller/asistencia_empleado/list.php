@@ -53,7 +53,7 @@ $count =0;
 <script>
     $(function() {
 
-        $("#table_asistencia_empleado").DataTable({
+        $("#table_alumnos").DataTable({
             "paging": true,
             "lengthChange": true,
             "searching": true,

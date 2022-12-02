@@ -387,7 +387,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE App -->
   <script src="view/dist/js/adminlte.min.js"></script>
   <script src="view/js/toastr.min.js"></script>
-
+<!-- DataTables -->
+  <script src="view/plugins/datatables/jquery.dataTables.js"></script>
+  <script src="view/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
   <script src="view/js/js-profesores.js"></script>
   <script>
     list_profesores();
