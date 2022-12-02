@@ -1,30 +1,27 @@
 <?php 
-include_once "../../model/profesor.php";
-$obj_profesores = new profesores();
+session_start();
+include_once "../../model/asistencia_profesor.php";
+ini_set('date.timezone','America/Lima');
+$obj_asistencia_profesor=new asistencia_profesor();
 
-$obj_profesores->id_alumno = $_REQUEST['id'];
-$obj_profesores->nombres = $_REQUEST['txt_nombres'];
-$obj_profesores->apellido_paterno = $_REQUEST['txt_ap_paterno'];
-$obj_profesores->apellido_materno = $_REQUEST['txt_ap_mat'];
-$obj_profesores->numero_documento = $_REQUEST['txt_doc'];
-$obj_profesores->fecha_nacimiento = $_REQUEST['txt_nacimiento'];
-$obj_profesores->genero = $_REQUEST['txt_genero'];
-$obj_profesores->direccion = $_REQUEST['txt_direccion'];
-$obj_profesores->email = $_REQUEST['txt_email'];
-$obj_profesores->grado = $_REQUEST['txt_grado'];
-$obj_profesores->foto = $_REQUEST['txt_foto'];
-$obj_profesores->constancia_estudios = $_REQUEST['txt_cs_est'];
-$obj_profesores->id_apoderado= $_REQUEST['txt_apoderado'];
+$hora_ingreso = date("H:i:s");
+$id_profesor = $_REQUEST['id_profesor'];
 
-if($_REQUEST["id"]>0){
-    $obj_profesores->id_profesor=$_REQUEST['id'];
-    $obj_profesores->update();
-    echo "true";
+$obj_asistencia_profesor->id_profesor=$id_profesor;
+$obj_asistencia_profesor->hora_ingreso=date("H:i:s");
+$obj_asistencia_profesor->asistencia="Presente";
+
+if( $obj_asistencia_profesor->consultDia(date("Y-m-d"))>0){
+    echo "error";
     die();
-}else{
-    $obj_profesores->create();
+}
+if ($_REQUEST["id"] == 0) {
+    $obj_asistencia_profesor->create();
     echo "true";
     die();
 }
+
+
+
 
 ?>

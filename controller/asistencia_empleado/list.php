@@ -50,3 +50,17 @@ $count =0;
         <?php } ?>
     </tbody>
 </table>
+<script>
+    $(function() {
+
+        $("#table_asistencia_empleado").DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": false,
+            "info": true,
+            "autoWidth": false,
+        });
+
+    });
+</script>

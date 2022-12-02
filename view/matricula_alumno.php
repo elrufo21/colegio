@@ -17,6 +17,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Theme style -->
     <link rel="stylesheet" href="view/dist/css/adminlte.min.css">
     <link rel="stylesheet" href="view/css/toastr.min.css">
+
+    <link rel="stylesheet" href="view/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -376,6 +378,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- AdminLTE App -->
     <script src="view/dist/js/adminlte.min.js"></script>
     <script src="view/js/toastr.min.js"></script>
+    <!-- DataTables -->
+    <script src="view/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="view/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 
     <script src="view/js/js-alumnos.js"></script>
     <script>

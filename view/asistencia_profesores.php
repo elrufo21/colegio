@@ -283,10 +283,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="card">
                             <div class="card-header">
 
-                                <button class="btn btn-info new-modal-alumnos" data-id="0"><i class="fas fa-plus-circle" aria-hidden="true"></i> Nuevo</button>
+                                <button class="btn btn-info new-modal-asistencia_profesor" data-id="0"><i class="fas fa-plus-circle" aria-hidden="true"></i> Nuevo</button>
 
                             </div>
-                            <div class="card-body table-alumnos">
+                            <div class="card-body table-asistencia-profesor">
                                 <!-- /.Aqui se cargar lista -->
                             </div>
                             <!-- /.card-body -->
@@ -295,11 +295,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
 
                 <!-- INICIA MODAL Tipo marca observacion-->
-                <div class="modal fade" id="modal-form-alumnos">
+                <div class="modal fade" id="modal-form-asistencia">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class=" modal-body">
-                                <form class="form_tipo_marca_observacion" id="form_alumnos">
+                                <form class="form_asistencia_profesor" id="form_asistencia_profesor">
 
                                 </form>
                             </div>
@@ -377,9 +377,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="view/dist/js/adminlte.min.js"></script>
     <script src="view/js/toastr.min.js"></script>
 
-    <script src="view/js/js-alumnos.js"></script>
+    <script src="view/js/js-asistencia_profesor.js"></script>
     <script>
-        list_alumnos();
+        list_asistencia_profesor();
     </script>
 
 
