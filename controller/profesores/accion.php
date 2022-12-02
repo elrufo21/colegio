@@ -1,5 +1,9 @@
 <?php 
 include_once "../../model/profesores.php";
+include_once "../../model/user.php";
+
+$obj_user = new user();
+
 $obj_profesor = new profesores();
 $obj_profesor->id_profesor = $_REQUEST['id'];
 $obj_profesor->nomrbes=$_REQUEST['txt_nombres'];
@@ -16,6 +20,17 @@ $obj_profesor->curso=$_REQUEST['txt_curso'];
 $obj_profesor->nro_celular=$_REQUEST['txt_num_cel'];
 $obj_profesor->passwrd=GeneratePassword(strlen($_REQUEST['txt_nombres']));
 
+$obj_user->nombres = $_REQUEST['txt_nombres'];
+$obj_user->apellido_paterno = $_REQUEST['txt_ap_pat'];
+$obj_user->apellido_materno = $_REQUEST['txt_ap_mat'];
+$obj_user->dni = $_REQUEST['txt_doc'];
+$obj_user->email = $_REQUEST['txt_email'];
+$obj_user->celular = $_REQUEST['txt_num_cel'];
+$obj_user->nacimiento = "";
+$obj_user->rango = "profesor";
+$obj_user->nombre_usuario = $_REQUEST['txt_ap_pat'] . $_REQUEST['txt_doc'];
+$obj_user->password = generatePassword(strlen($_REQUEST['txt_nombres']));
+
 if($_REQUEST["id"]>0){
     $obj_profesor->id_profesor=$_REQUEST['id'];    
     $obj_profesor->update();
@@ -24,6 +39,7 @@ if($_REQUEST["id"]>0){
 }else{
 
     $obj_profesor->create();
+    $obj_user->create();
     echo "true";
     die(); 
 }

@@ -20,14 +20,14 @@ class alumno extends cn{
 
     public function create(){
         $query = "INSERT INTO alumnos VALUES(0,'$this->nombres','$this->apellido_paterno','$this->apellido_materno','$this->numero_documento'
-        ,'$this->fecha_nacimiento','$this->genero','$this->direccion','$this->email','$this->grado','$this->foto','$this->constancia_estudios',
-        '$this->id_apoderado',1,now(),now())";
+        ,'$this->fecha_nacimiento','$this->direccion','$this->email','$this->grado','$this->foto','$this->constancia_estudios',
+        '$this->id_apoderado',1,now(),now(),'$this->genero')";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;
     }
     public function read(){
-        $query = "SELECT * FROM alumnos";
+        $query = "SELECT a.*,ap.nombres as ap_nombre,ap.apellido_paterno as ap_apellido_pa,ap.apellido_materno as ap_apellido_ma,ap.celular as ap_celular FROM alumnos a INNER JOIN apoderado ap ON a.numero_documento=ap.dni_alumno";
         $rs=mysqli_query($this->f_cn(),$query);
         mysqli_close($this->f_cn());
         return $rs;

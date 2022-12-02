@@ -66,6 +66,31 @@ class profesores extends cn{
         }
         mysqli_close($this->f_cn());
     }
+    public function consultDNI()
+    {
+        $query = "SELECT * FROM profesores WHERE numero_documento ='$this->numero_documento'";
+        $rs = mysqli_query($this->f_cn(), $query);
+        if ($fila = mysqli_fetch_array($rs)) {
+            $this->id_profesor = $fila['id_profesor'];
+            $this->nomrbes = $fila['nombres'];
+            $this->apellido_paterno = $fila['apellido_paterno'];
+            $this->apellido_materno = $fila['apellido_materno'];
+            $this->numero_documento = $fila['numero_documento'];
+            $this->fecha_nacimiento = $fila['fecha_nacimiento'];
+            $this->direccion = $fila['direccion'];
+            $this->genero = $fila['genero'];
+            $this->email = $fila['email'];
+            $this->foto = $fila['foto'];
+            $this->curricullum = $fila['curricullum'];
+            $this->curso = $fila['curso'];
+            $this->nro_celular = $fila['nro_celular'];
+            $this->passwrd = $fila['passwrd'];
+            $this->estado = $fila['estado'];
+            $this->fecha_registro = $fila['fecha_registro'];
+            $this->fecha_actualiza = $fila['fecha_actualiza'];
+        }
+        mysqli_close($this->f_cn());
+    }
 }
 
 ?>
