@@ -1,6 +1,5 @@
 <?php
 
-define("BASE_URL","http://192.168.0.101/freky/desarrollos_freky-master/");
 
 	function strClean($strCadena){
         $string = preg_replace(['/\s+/','/^\s|\s$/'],[' ',''], $strCadena);
